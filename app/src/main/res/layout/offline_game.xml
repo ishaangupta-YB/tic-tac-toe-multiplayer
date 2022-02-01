@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33333C"
+    tools:context=".OfflineGame">
+
+    <TextView
+        android:id="@+id/winstvsingle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Score"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/winsectionsingleplayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/winstvsingle">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12sp"
+            app:cardElevation="14sp"
+            app:cardMaxElevation="16sp"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/player1winsingle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginBottom="8sp"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginBottom="8sp"
+                    android:text="Player 1 (X)"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="12sp"
+            app:cardElevation="14sp"
+            app:cardMaxElevation="16sp"
+            app:cardPreventCornerOverlap="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/player2winssingle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="8sp"
+                    android:text="0"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4sp"
+                    android:layout_marginBottom="8sp"
+                    android:text="Player 2 (O)"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gridsingleplayer"
+        android:layout_width="350sp"
+        android:layout_height="350sp"
+        android:layout_marginTop="36sp"
+        android:orientation="vertical"
+        android:padding="2sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winsectionsingleplayer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="0"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="2"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="3"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="4"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="5"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="6"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="7"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                android:onClick="playerTap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:tag="8"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/teal_700"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/offlinestatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:text=""
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridsingleplayer" />
+
+    <Button
+        android:id="@+id/restartsinglebtn"
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:padding="12sp"
+        android:text="restart game"
+        android:textAllCaps="true"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/offlinestatus"
+        app:layout_constraintVertical_bias="0.32" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

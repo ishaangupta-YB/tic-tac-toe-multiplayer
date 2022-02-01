@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headingtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tic Tac Toe"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:layout_marginTop="42sp"
+        android:textColor="#04BAA8"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/frontpageiv"
+        android:layout_width="match_parent"
+        android:layout_height="310sp"
+        android:layout_below="@id/headingtv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90sp"
+        android:adjustViewBounds="true"
+        android:padding="2sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/frontpagelogo" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70sp"
+        android:padding="5sp"
+        android:layout_below="@+id/frontpageiv">
+
+        <Button
+            android:id="@+id/offlinebtn"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="7sp"
+            android:textSize="18sp"
+            android:backgroundTint="@color/teal_700"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:text="Offline"/>
+
+        <Button
+            android:id="@+id/onlinebtn"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:backgroundTint="@color/teal_700"
+            android:layout_margin="7sp"
+            android:text="Online" />
+    </LinearLayout>
+
+</RelativeLayout>

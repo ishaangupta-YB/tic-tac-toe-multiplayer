@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33333C"
+    tools:context=".JoinGame">
+
+    <TextView
+        android:id="@+id/join_game_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70sp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Join a Game"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_joingame_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="Enter Code Below To Join A Game"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="50sp"
+        app:layout_constraintTop_toBottomOf="@+id/join_game_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_join_game"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="14sp"
+        android:elevation="14sp"
+        app:cardMaxElevation="20sp"
+        android:layout_marginTop="8sp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_joingame_hint"
+        android:layout_marginStart="22sp"
+        android:layout_marginEnd="22sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_join_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="18sp"
+                android:hint="0000"
+                android:textColorHint="#D1D0D0"
+                android:maxLength="4"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/joinbtn_join_game"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join"
+                android:backgroundTint="@color/teal_700"
+                android:textSize="26sp"
+                android:layout_marginTop="30sp"
+                android:layout_marginEnd="50sp"
+                android:layout_marginStart="50sp"
+                android:layout_marginBottom="30sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

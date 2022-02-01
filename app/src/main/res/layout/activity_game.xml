@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33333C"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/game_activity_heading_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:padding="8sp"
+        android:text="You are: -"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_marginTop="14sp"
+        android:padding="1sp"
+        android:backgroundTint="#1E1E2E"
+        app:layout_constraintTop_toBottomOf="@+id/game_activity_heading_tv"
+        app:layout_constraintRight_toLeftOf="@+id/cardView3"
+        android:layout_marginRight="8sp"
+        android:layout_marginLeft="12sp"
+        app:cardCornerRadius="8sp"
+        android:elevation="20sp"
+        app:cardElevation="20sp"
+        app:cardMaxElevation="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+        android:id="@+id/cardView4"
+        android:layout_marginStart="12sp"
+        android:layout_marginEnd="8sp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/turn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Turn :"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/turn_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="4sp"
+                android:fontFamily="sans-serif"
+                android:text="X WON!"
+                android:textColor="#FFEB3B"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/turn"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14sp"
+        android:layout_marginRight="12sp"
+        app:cardCornerRadius="8sp"
+        android:backgroundTint="#1E1E2E"
+        android:elevation="20sp"
+        app:cardElevation="20sp"
+        app:cardMaxElevation="24sp"
+        android:padding="1sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_activity_heading_tv">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Score :"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/x_score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4sp"
+                android:layout_marginBottom="8dp"
+                android:text="X - 0"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/x_color"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="2sp"
+                android:gravity="top"
+                android:padding="0sp"
+                android:text="|"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:textSize="40sp"
+                app:layout_constraintLeft_toRightOf="@+id/x_score_text"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/y_score_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4sp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Y - 0"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/y_color"
+                android:textSize="34sp"
+                app:layout_constraintLeft_toRightOf="@+id/textView9"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/grids_game_activity"
+        android:layout_width="350sp"
+        android:layout_height="350sp"
+        android:orientation="vertical"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/oneTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="2"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/twoTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="3"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/threeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="4"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/fourTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="5"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/fiveTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="6"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/sixTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="7"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/sevenTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="8"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/eightTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="playerTaps"
+                android:tag="9"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="14sp"
+                app:cardMaxElevation="16sp"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:id="@+id/nineTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4sp"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/teal_700"
+                    android:textSize="50sp" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/restart_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restart Game"
+        android:textSize="26sp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="45sp"
+        android:layout_marginEnd="45sp"
+        android:layout_marginTop="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/grids_game_activity"
+        android:backgroundTint="#59595E"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

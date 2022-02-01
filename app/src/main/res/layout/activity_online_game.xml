@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33333C"
+    tools:context=".OnlineGame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15sp"
+        android:weightSum="3"
+        android:layout_margin="10sp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose An Option"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="48sp"/>
+        <Button
+            android:id="@+id/createbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Create a Game"
+            android:layout_margin="10sp"
+            android:paddingBottom="15sp"
+            android:paddingTop="15sp"/>
+        <Button
+            android:id="@+id/joinbtn"
+            android:layout_marginTop="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:backgroundTint="@color/teal_700"
+            android:layout_margin="10sp"
+            android:paddingBottom="15sp"
+            android:paddingTop="15sp"
+            android:text="Join a game"/>
+    </LinearLayout>
+
+</RelativeLayout>

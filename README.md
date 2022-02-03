@@ -15,3 +15,5 @@ It has two modes of game:
 > - Firebase
 
 ## Demo
+[!Demo](https://user-images.githubusercontent.com/52467684/152413933-d2f87071-0bc7-43f2-b1e5-6896c29af4d1.mp4)
+
